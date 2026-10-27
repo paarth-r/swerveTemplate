@@ -1,0 +1,84 @@
+{
+ "name": "FRC-9974-Freshmen",
+ "version": 2,
+ "type": "Swerve",
+ "variables": {
+  "expressions": {},
+  "poses": {}
+ },
+ "config": {
+  "frontLeft": {
+   "x": {
+    "exp": "9.875 in",
+    "val": 0.25082499999999996
+   },
+   "y": {
+    "exp": "11.875 in",
+    "val": 0.301625
+   }
+  },
+  "backLeft": {
+   "x": {
+    "exp": "-9.875 in",
+    "val": -0.25082499999999996
+   },
+   "y": {
+    "exp": "11.875 in",
+    "val": 0.301625
+   }
+  },
+  "mass": {
+   "exp": "54 kg",
+   "val": 54.0
+  },
+  "inertia": {
+   "exp": "6 kg * m ^ 2",
+   "val": 6.0
+  },
+  "gearing": {
+   "exp": "7.03125",
+   "val": 7.03125
+  },
+  "radius": {
+   "exp": "2 in",
+   "val": 0.0508
+  },
+  "vmax": {
+   "exp": "5800 RPM",
+   "val": 607.3745796940267
+  },
+  "tmax": {
+   "exp": "1.16 N * m",
+   "val": 1.16
+  },
+  "cof": {
+   "exp": "1.5",
+   "val": 1.5
+  },
+  "bumper": {
+   "front": {
+    "exp": "15.875 in",
+    "val": 0.403225
+   },
+   "side": {
+    "exp": "17.875 in",
+    "val": 0.45402499999999996
+   },
+   "back": {
+    "exp": "15.875 in",
+    "val": 0.403225
+   }
+  },
+  "differentialTrackWidth": {
+   "exp": "22 in",
+   "val": 0.5588
+  }
+ },
+ "generationFeatures": [],
+ "codegen": {
+  "root": null,
+  "genVars": true,
+  "genTrajData": true,
+  "useChoreoLib": true
+ }
+}
