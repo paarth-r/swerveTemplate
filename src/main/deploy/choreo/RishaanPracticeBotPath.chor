@@ -1,5 +1,5 @@
 {
- "name":"Practice",
+ "name":"RishaanPracticeBotPath",
  "version":2,
  "type":"Swerve",
  "variables":{
@@ -127,12 +127,12 @@
    }
   },
   "mass":{
-   "exp":"60.09010281 kg",
-   "val":60.09010281
+   "exp":"45 lbs",
+   "val":20.41165665
   },
   "inertia":{
-   "exp":"(8.147288536 * 2) kg * m ^ 2",
-   "val":16.294577072
+   "exp":"2.841185 kg * m ^ 2",
+   "val":2.841185
   },
   "gearing":{
    "exp":"(54 / 11) * (25 / 32) * (30 / 15)",
@@ -156,16 +156,16 @@
   },
   "bumper":{
    "front":{
-    "exp":"(30.9375 / 2 - 0.25 + 9.15625) in",
-    "val":0.6191249999999999
+    "exp":"30.9375 / 2 in",
+    "val":0.39290625
    },
    "side":{
     "exp":"34.9375 / 2 in",
     "val":0.44370625
    },
    "back":{
-    "exp":"(30.9375 / 2 + 0.25) in",
-    "val":0.39925625
+    "exp":"30.9375 / 2 in",
+    "val":0.39290625
    }
   },
   "differentialTrackWidth":{

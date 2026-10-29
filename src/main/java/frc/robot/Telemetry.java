@@ -55,6 +55,8 @@ public class Telemetry {
     private final NetworkTable table = inst.getTable("Pose");
     private final DoubleArrayPublisher fieldPub = table.getDoubleArrayTopic("robotPose").publish();
     private final StringPublisher fieldTypePub = table.getStringTopic(".type").publish();
+    /* Choreo path being driven, drawn as a line on the same Field2d */
+    private final DoubleArrayPublisher pathPub = table.getDoubleArrayTopic("Path").publish();
 
     /* Mechanisms to represent the swerve module states */
     private final Mechanism2d[] m_moduleMechanisms = new Mechanism2d[] {
@@ -83,6 +85,17 @@ public class Telemetry {
     };
 
     private final double[] m_poseArray = new double[3];
+
+    /** Draw a Choreo path on the Field2d so you can compare it to where the robot actually goes. */
+    public void showPath(Pose2d[] poses) {
+        double[] pathArray = new double[poses.length * 3];
+        for (int i = 0; i < poses.length; ++i) {
+            pathArray[3 * i] = poses[i].getX();
+            pathArray[3 * i + 1] = poses[i].getY();
+            pathArray[3 * i + 2] = poses[i].getRotation().getDegrees();
+        }
+        pathPub.set(pathArray);
+    }
 
     /** Accept the swerve drive state and telemeterize it to SmartDashboard and SignalLogger. */
     public void telemeterize(SwerveDriveState state) {

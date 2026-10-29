@@ -52,7 +52,10 @@ public class RobotContainer {
         drivetrain::resetPose,            // Reset odometry to the path's start
         drivetrain::followTrajectory,     // Follow one sample of the path
         false,                            // Never mirror paths for red: always run as blue alliance
-        drivetrain
+        drivetrain,
+        (trajectory, starting) -> {       // Draw the path on the "Pose" field when it starts
+            if (starting) logger.showPath(trajectory.getPoses());
+        }
     );
     private final AutoChooser autoChooser = new AutoChooser();
 
